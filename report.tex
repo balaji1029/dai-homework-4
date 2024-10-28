@@ -39,6 +39,54 @@
 \newpage
 
 \pagenumbering{arabic}
+
+\section{Question 1}
+
+\subsection{Part a}
+
+We just considered the data from camera 1 to be final as the count still remains the same with the errors cameras seem to develop.
+
+We implemented both ETS and SARIMA and took a linear combination of both the models to get the final forecast and the time series prediction looks like this:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{1a_image.png}
+\caption{The plot of the time series}
+\end{figure}
+
+The MASE for the prediction was $0.76$ and the MAPE was $4.61\%$.
+
+\subsection{Part b}
+
+We ordered the data according to the vehicle numbers, we tried to map most of the cars with null values and hamming distance of 1 but had to ignore some data which was indecisive.
+
+We ran SARIMA model on this data and the time series prediction looks like this:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{1b_image.png}
+\caption{The plot of the time series}
+\end{figure}
+
+\subsection{Part c}
+
+For the number of vehicles prediction, we removed the outliers of greater than 95 percentile and less than 5 percentile and then ran the SARIMA model on the data. The time series prediction looks like this:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{1c_image_1.png}
+\caption{The plot of the time series}
+\end{figure}
+
+For the duration prediction, we filled the null values with the mean of the data points of its neighboring indices and even for the outliers we filled the data with the mean of the data points of its neighboring indices. We then ran the SARIMA model on the data. The time series prediction looks like this:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{1c_image_2.png}
+\caption{Plot for 1}
+\end{figure}
+
+
 \section{Question 2}
 \subsection{Part 1}
 \subsubsection{Part b: }
